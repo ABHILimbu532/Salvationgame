@@ -1,0 +1,113 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assuring Salvation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            background-color: #4682b4;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .content, .result {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .button {
+            display: inline-block;
+            background-color: #ff4500;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 1.2em;
+            margin-top: 30px;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #ff6347;
+        }
+        .form-group {
+            margin: 15px 0;
+        }
+        .form-group label {
+            display: block;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            padding: 10px;
+            font-size: 1em;
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+            display: block;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .result {
+            font-size: 1.5em;
+            color: red;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>ASSURING SALVATION</h1>
+</header>
+
+<div class="content">
+    <p>Have you ever wondered about the assurance of your salvation? It's a question that many ponder at some point in their spiritual journey.</p>
+    <p>But fear not, we have a way to check your status and see if you are indeed on the path to eternal peace.</p>
+    <p>Take a moment to reflect, and when you're ready, click the link below.</p>
+
+    <a href="#" class="button" onclick="showForm()">Click here to see whether you are saved</a>
+</div>
+
+<div class="content" id="form-container" style="display: none;">
+    <div class="form-group">
+        <label for="name">Enter Your Name:</label>
+        <input type="text" id="name" placeholder="Your Name">
+    </div>
+    <div class="form-group">
+        <label for="denomination">Enter Your Denomination:</label>
+        <input type="text" id="denomination" placeholder="Your Denomination">
+    </div>
+    <a href="#" class="button" onclick="showResult()">Submit</a>
+</div>
+
+<div class="result" id="result" style="display: none;">
+    <p>SORRY, YOU ARE NOT SAVED.</p>
+    <p>ONLY MR. ABHI IS SAVED IN YOUR CLASS. GO AND REPENT!</p>
+</div>
+
+<script>
+    function showForm() {
+        document.querySelector('.content').style.display = 'none';
+        document.getElementById('form-container').style.display = 'block';
+    }
+
+    function showResult() {
+        var name = document.getElementById('name').value;
+        var denomination = document.getElementById('denomination').value;
+        if (name && denomination) {
+            document.getElementById('form-container').style.display = 'none';
+            document.getElementById('result').style.display = 'block';
+        } else {
+            alert("Please enter your name and denomination.");
+        }
+    }
+</script>
+
+</body>
+</html>
